@@ -1,0 +1,3 @@
+Startegy Pattern:
+   This pattern deines a family of algorithms, encapsulates each one, and makes them interchangable.
+   Startegy lets the algorithm vary independently from clients use it.
