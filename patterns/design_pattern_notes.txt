@@ -1,4 +1,4 @@
-Startegy Pattern:
+STARTEGY PATTERN:
    This pattern deines a family of algorithms, encapsulates each one, and makes them interchangable.
    Startegy lets the algorithm vary independently from clients use it.
 
@@ -7,5 +7,30 @@ Representation:
 	The arrow with triangle head dotted/breaked line represents interface ('implenetation').
 	The arrow with normal convenstion continous line represents HAS-A relationship.
 
-	
 
+
+OO Basics:
+	Abstraction
+	Encapsulation
+	Polymorphism
+	Inheritance
+
+OO Principles:
+	Encapsulate what varies
+	Favour composition over inheritance
+	Program to interface, not implementations
+
+OO Pattern:
+	Strategy - defines a family of algorithm encapsulates each one, and makes them interchangable. Strategy lets the algorithm vary independently from clients that use it.
+
+	
+OBSERVER PATTERN:
+   This pattern defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.
+
+   This is more of a publisher - subscriber model, where in publisher is refered as SUBJECT and teh subscriber referred as OBSERVER. 
+   
+   Example is newspaper being published by the business company and readers subscribe and unsubscribe to recive the new newspaper.
+
+   When the state of one object is change, all its dependents are notified.
+
+Loosely copuled design

@@ -6,4 +6,7 @@ Design principle :
 
 3. Favour composition over inheritance.
 
+	Composition is more of HAS-A relationship reference. Ex. Duck has-a relationship with the QuackBehaviour and FlyBehaviour.
+
+4. Strive for loosely coupled designs between objects that interact.
 
