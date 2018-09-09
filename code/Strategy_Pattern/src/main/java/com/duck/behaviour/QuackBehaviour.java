@@ -1,4 +1,4 @@
-package com.design.pattern;
+package com.duck.behaviour;
 
 public interface QuackBehaviour {
     public void quack();

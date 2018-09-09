@@ -1,4 +1,10 @@
 package com.duck.behaviour.impl;
 
-public class FlyWithWings {
+import com.duck.behaviour.FlyBehaviour;
+
+public class FlyWithWings implements FlyBehaviour {
+    @Override
+    public void fly() {
+        System.out.println("fly with wings..");
+    }
 }
