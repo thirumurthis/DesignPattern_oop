@@ -10,7 +10,8 @@ public class Main {
         MallardDuck mallardDuck = new MallardDuck();
         mallardDuck.performFly();
         mallardDuck.performQuack();
-
+        //changing the behaviour of the fly dynamically at runtime
+        //the use of getter setter method.
         mallardDuck.setFlyBehaviour(new FlyNot());
         mallardDuck.performFly();
     }
