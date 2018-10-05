@@ -1,12 +1,27 @@
 Design principle :
 
-1. Identify the aspects of your application that vary and seperate them from what stays the same.
+1. Identify the aspects of your application that vary and separate them from what stays the same.
+<<encapsulates that varies>>
 
 2. Program to an interface not an implementation.
 
-3. Favour composition over inheritance.
-
+3. Favor composition over inheritance.
 	Composition is more of HAS-A relationship reference. Ex. Duck has-a relationship with the QuackBehaviour and FlyBehaviour.
 
 4. Strive for loosely coupled designs between objects that interact.
 
+5. open- closed principle, Classes should be open for extension, but closed for modification.
+
+6. Dependency inversion principle - Depend upon abstraction do not depend upon concrete classes.
+
+7. Principle of Least knowledge - talk only to your immediate friends.
+				This provides guidelines, we should only invoke methods that belon to.
+				the object itself
+				object passed in as a parameter to the method
+				any object that method creates or instantiate
+				any component of the object
+
+		Don't call the method of the object that is returned by the method.
+ Sometimes this principle is referred as Law of Demeter.
+
+ 8. Hollywood Principle: don't call us, we'll call you.

@@ -3,10 +3,9 @@ STARTEGY PATTERN:
    Startegy lets the algorithm vary independently from clients use it.
 
 Representation:
-	The arrow with triangle head continous line represents inhertance ('extends').
-	The arrow with triangle head dotted/breaked line represents interface ('implenetation').
-	The arrow with normal convenstion continous line represents HAS-A relationship.
-
+	The arrow with triangle head continuous line represents inheritance ('extends').
+	The arrow with triangle head dotted/break line represents interface ('implements').
+	The arrow with normal convention continuous line represents HAS-A relationship.
 
 
 OO Basics:
@@ -23,14 +22,96 @@ OO Principles:
 OO Pattern:
 	Strategy - defines a family of algorithm encapsulates each one, and makes them interchangable. Strategy lets the algorithm vary independently from clients that use it.
 
-	
+
 OBSERVER PATTERN:
    This pattern defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.
 
-   This is more of a publisher - subscriber model, where in publisher is refered as SUBJECT and teh subscriber referred as OBSERVER. 
-   
+   This is more of a publisher - subscriber model, where in publisher is refered as SUBJECT and teh subscriber referred as OBSERVER.
+
    Example is newspaper being published by the business company and readers subscribe and unsubscribe to recive the new newspaper.
 
    When the state of one object is change, all its dependents are notified.
 
-Loosely copuled design
+Loosely coupled design
+
+Simple Factory Pattern
+ Factory Method Pattern:
+      This pattern encapsulates the knowledge.
+
+      Definition: Factory method pattern defines an interface for creating an
+      object, but lets subclasses decide which class to instantiate. Factory
+      Method lets a class defer instantiation to subclasses.
+
+      creator - contains abstract factory method in parent class
+      the subclass actually implements the factory method which decides on the product
+
+      product - extends the parent class and is utilized in creator subclasses
+
+  Abstract Factory Pattern:
+      This provides and interface for creating a families of related or dependent
+      objects without specifying their concrete class.
+
+Singleton Pattern:
+        This ensures a class has only one instance, and provides a global point of
+        access to it.
+        << private constructor and static method with null & new object creation>>
+
+       - issues:
+              multi-threading issue resolved using three approach
+              1. using synchronize block - costly operation for performance
+              2. using eagerly instantiation, when declaring the class level variable of
+              class instance, using static MyClass classvar = new MyClass();
+              3. double-checked locking- we need to perform synchronize only for the first
+              time when the object is created by jvm multi threading.
+                - declare class variable as volatile (static volatile MyClass classvar;
+                then using static Myclass getInstance () { if (classvar == null)} {
+                synchronize(Myclass.class){
+                if (classvar == null ) return new MyClass();
+                }
+                })
+                //3 is little performance improvised.
+
+
+Command Pattern:
+        This pattern encapsulates a request as an object, thereby letting you
+        parameterize other objects with different requests, queue or log requests, and
+        support undoable operations.
+
+    Meta command Pattern:
+        The Meta command Pattern allows to create macros of commands so that you can execute
+        multiple command at once.
+
+Adapter pattern:
+  Adapter pattern converts the interface of a class into another interface the clients expect.
+  Adapter lets classes work together that couldn't otherwise because of incompatible interfaces
+
+The adapter class to implement the target interface and hold reference to the adaptee (duck target, turkey adaptee)
+
+  currently only one interface can be adapted.
+  if we need multiple class, then we need to use facade
+
+  object adapters - uses composition, meaning implements class
+  class adapters - uses extending subclass, java doesn't support multiple inheritance,
+  to achieve class adapter is to subclass the target and the adaptee
+
+Facade pattern: tries to simplify the complex interface simple.
+   This provides a unified interface to a set of interfaces in a subsystem. Facade
+   defines a higher level interface that makes the subsystem easier to use.
+
+Template Method Pattern /Encapsulation Pattern:
+  common functionality needs to be moved to the base class if need.
+  marking the base class method final, will not be overridden by the subclass.
+  method that are changing needs to be marked as abstract.
+
+  Template method Pattern - defines the skeleton of an algorithm in a method deferring some steps
+  to subclasses. Template method lets subclasses redefine certain steps of an algorithms without
+  changing the algorithm structure.
+  hook in template method pattern, can be used in case of optional part of the
+  algorithm to be controlled by the subclasses
+
+Iterator pattern:
+
+composite pattern:
+ this pattern allows you to compose objects into tree structures to represent part-whole hierarchies.
+ Composite lets client treat individual objects and compositions of objects uniformily.
+ 
